@@ -70,6 +70,16 @@ The FarmSim mod subscribes to only a single topic (for now):
 The following are step-by-step instructions allow you to run ROS nodes in Windows 10. There are two parts of the instructions.
 One is for publishing data, the other is for subscribing data.
 
+#### Setting up the ROS network
+
+The ROS_IP and ROS_MASTER_URI environment variables must be set, with the appropriate IP addresses of the ROS master and the PC running FS19, on every command prompt window once the virtual environment is activated:
+
+```cmd
+# This IP corresponds to the computer running FS.
+set ROS_IP=10.42.0.8
+#This IP represents the remote computer or container running the roscore and navigation stack.
+set ROS_MASTER_URI=http://10.42.0.9:11311/
+```
 
 #### Publishing data
 
